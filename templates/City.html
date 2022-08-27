@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #continent-photo{
+    background: url('a.png') no-repeat;
+    height: 300px;
+    width: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid #3F0C1F;
+    overflow: hidden;
+}
+
+h2{
+    margin-top:40px;
+    text-align: center;
+}
+
+#continent-content{
+    text-align: center;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(161, 152, 152); 
+    color: black; 
+    border: 1px solid #9da59d;
+  }
+
+.slideshow-container {
+    height: 300px;
+    width: 500px;
+    position: relative;
+    margin: auto;
+    border: 1px solid #3F0C1F;
+    overflow: hidden;
+  }
+
+#continent-photo{
+    background: url('a.png') no-repeat;
+    height: 300px;
+    width: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid #3F0C1F;
+    overflow: hidden;
+ }
+
+.row {
+    width:500px;
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.column {
+    float: left;
+    width: 25%;
+    opacity: 0.9;
+}
+</style>
+<head>
+    <link rel="stylesheet" href="styles_city.css">
+    <title>  Travel 404 </title>
+    <link rel="stylesheet" href="static/styles/styles_city.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+
+</head>
+<body>
+    <h1> Randomiser 404. </h1>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="countries.html">Countries</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div id="continent-content">
+        <h2>Your randomized continent is</h2>
+        <center><div id="continent-photo" ></div></center>
+        <h3> [continent] </h3>
+        <button class="button">Redo</button>
+    </div>
+
+    <div>
+        <h2>Next, find a city</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade"><img src="../static/images/a.png"></div>
+            <div class="mySlides fade"><img src="../static/images/b.png"></div>
+            <div class="mySlides fade"><img src="../static/images/a.png"></div>
+            <div class="mySlides fade"><img src="../static/images/b.png"></div>
+
+        </div>
+        <center><div class="row">
+            <div class="column"><img class="cursor" src="../static/images/a.png" style="width:100%" onclick="currentSlide(1)"></div>
+            <div class="column"><img class="cursor" src="../static/images/b.png" style="width:100%" onclick="currentSlide(2)"></div>
+            <div class="column"><img class="cursor" src="../static/images/a.png" style="width:100%" onclick="currentSlide(3)"></div>
+            <div class="column"><img class="cursor" src="../static/images/b.png" style="width:100%" onclick="currentSlide(4)"></div>
+        </div></center>
+        <div style="text-align: center; margin-top: 30px;"><button class="button">Randomize</button></div>
+        <script>
+            let slide_index = 1;
+            showSlides(slide_index);
+            function nextSlide(n) {showSlides(slide_index += n);}
+            function currentSlide(n) {showSlides(slide_index = n);}
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              if (n > slides.length) {slide_index = 1}    
+              if (n < 1) {slide_index = slides.length}
+              for (i = 0; i < slides.length; i++)
+                slides[i].style.display = "none";  
+              slides[slide_index-1].style.display = "block";  
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
