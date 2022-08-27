@@ -14,25 +14,29 @@ def about():
 def countries():
     return render_template('countries.html')
 
-@app.route('/asia', methods=['GET', 'POST'])
+@app.route('/Asia', methods=['GET', 'POST'])
 def asia():
     return render_template('continents/asia.html')
 
-@app.route('/europe', methods=['GET', 'POST'])
+@app.route('/Europe', methods=['GET', 'POST'])
 def europe():
     return render_template('continents/europe.html')
 
-@app.route('/south america', methods=['GET', 'POST'])
+@app.route('/SouthAmerica', methods=['GET', 'POST'])
 def south_america():
     return render_template('continents/sa.html')
 
-@app.route('/north america', methods=['GET', 'POST'])
+@app.route('/NorthAmerica', methods=['GET', 'POST'])
 def north_america():
     return render_template('continents/na.html')
 
-@app.route('/africa', methods=['GET', 'POST'])
+@app.route('/Africa', methods=['GET', 'POST'])
 def africa():
     return render_template('continents/africa.html')
+
+@app.route('/Pacific', methods=['GET', 'POST'])
+def pacific():
+    return render_template('continents/pacific.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
