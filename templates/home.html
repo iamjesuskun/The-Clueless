@@ -1,68 +1,82 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Travel 404 </title>
-      <link rel="stylesheet" href="../static/styles/styles.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
-  </head>
-  <body>
-    <a href="home.html" style="float:left;"><div id="logo-img"></div></a>
+<head>
+    <title>Travel 404 </title>
+    <link rel="stylesheet" href="static/styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+
+</head>
+<body>
     <h1> Travel 404. </h1>
-
     <div class="topnav">
-        <a class="active" href="home.html">Home</a>
-        <a href="countries.html">Countries</a>
-        <a href="about.html">About</a>
+        <a class="active" href="/">Home</a>
+        <a href="{{ url_for('countries') }}">Countries</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+    <p> Where are you headed to next? </p>
+    <h2> CONTINENTS </h2>
+    <div class="gallery">
+        <a target="_self" href="/asia">
+            <img src="static/images/Asia.jpg" alt="Asia" width="600" height="400">
+        </a>
+        <div class="desc">ASIA</div>
+    </div>
+    <div class="gallery">
+        <a target="_self" href="/europe">
+            <img src="static/images/Europe.jpg" alt="Europe" width="600" height="400">
+        </a>
+        <div class="desc">EUROPE</div>
+    </div>
+    <div class="gallery">
+        <a target="_self" href="/pacific">
+            <img src="static/images/Pacific.jpg" alt="Pacific" width="600" height="400">
+        </a>
+        <div class="desc">PACIFIC</div>
+    </div>
+    <div class="gallery">
+        <a target="_self" href="/north america">
+            <img src="static/images/North America.jpg" alt="North America" width="600" height="400">
+        </a>
+        <div class="desc">NORTH AMERICA</div>
+    </div>
+   
+    <div class="gallery">
+        <a target="_self" href="/south america">
+            <img src="static/images/South America.jpg" alt="South America" width="600" height="400">
+        </a>
+        <div class="desc">SOUTH AMERICA</div>
+    </div>
+    <div class="gallery">
+        <a target="_self" href="/africa">
+            <img src="static/images/Africa.jpg" alt="Africa" width="600" height="400">
+        </a>
+        <div class="desc">AFRICA</div>
+    </div>
+    <div class="gallery">
+        <input type="image" src="static/images/Random.png" value="Random" onclick="countryChosen(this.value)" width="220" height="180"/>
+        <div class="desc">RANDOM</div>
     </div>
 
-    <div id = "content">
-      <h2> Where are you headed to? </h2>
-      <h3> The random destionation generator will choose it for you!</h3>
+    <!-- <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "/countries";
+        };
+    </script> -->
+    <script>
+        function countryChosen(elm) {
+            const continents = ["asia", "pacific", "africa", "europe", "north america", "south america"];  
+            if (elm == "Random"){
+                const randomElement = continents[Math.floor(Math.random() * continents.length)];
+                // document.getElementById("countryChosen").value = 'The continent ' + randomElement + ' has been randomly chosen';
+                location.href = randomElement;
+                // window.location('/' + randomElement);
 
-      <h2> First, choose a continent </h2>
+            }
+        }
+    </script>
+</body>
 
-      <div class="gallery">
-          <a target="_blank" href="Asia.html">
-            <img src="../static/images/continents/Asia.jpg" alt="Asia">
-          </a>
-          <div class="desc">ASIA</div>
-        </div>
-        
-        <div class="gallery">
-          <a target="_blank" href="Europe.html">
-            <img src="../static/images/continents/Europe.jpg" alt="Europe">
-          </a>
-          <div class="desc">EUROPE</div>
-        </div>
-        
-        <div class="gallery">
-          <a target="_blank" href="Pacific.html">
-            <img src="../static/images/continents/Pacific.jpg" alt="Pacific">
-          </a>
-          <div class="desc">PACIFIC</div>
-        </div>
-        
-        <div class="gallery">
-          <a target="_blank" href="NorthAmerica.html">
-            <img src="../static/images/continents/North America.jpg" alt="North America">
-          </a>
-          <div class="desc">NORTH AMERICA</div>
-        </div>
 
-        <div class="gallery">
-          <a target="_blank" href="SouthAmerica.html">
-            <img src="../static/images/continents/South America.jpg" alt="South America">
-          </a>
-          <div class="desc">SOUTH AMERICA</div>
-        </div>
-
-        <div class="gallery">
-          <a target="_blank" href="Africa.html">
-            <img src="../static/images/continents/Africa.jpg" alt="Africa">
-          </a>
-          <div class="desc">AFRICA</div>
-        </div>
-    </div>
-  </body>
 </html>
