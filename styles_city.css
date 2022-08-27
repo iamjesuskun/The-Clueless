@@ -1,0 +1,93 @@
+#continent-photo{
+    background: url('a.png') no-repeat;
+    height: 300px;
+    width: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid #3F0C1F;
+    overflow: hidden;
+}
+
+h2{
+    margin-top:40px;
+    text-align: center;
+}
+
+#continent-content{
+    text-align: center;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(161, 152, 152); 
+    color: black; 
+    border: 1px solid #9da59d;
+  }
+
+.slideshow-container {
+    height: 300px;
+    width: 500px;
+    position: relative;
+    margin: auto;
+    border: 1px solid #3F0C1F;
+    overflow: hidden;
+  }
+
+#continent-photo{
+    background: url('a.png') no-repeat;
+    height: 300px;
+    width: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid #3F0C1F;
+    overflow: hidden;
+ }
+
+.row {
+    width:500px;
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.column {
+    float: left;
+    width: 25%;
+    opacity: 0.9;
+}
+
+.prev, .next {
+    cursor: pointer;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    width: auto;
+    user-select: none;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
