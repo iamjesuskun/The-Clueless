@@ -13,5 +13,8 @@ def about():
 @app.route('/countries', methods=['GET', 'POST'])
 def countries():
     return render_template('countries.html')
+@app.route('/asia', methods=['GET', 'POST'])
+def asia():
+    return render_template('Asia.html')
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
