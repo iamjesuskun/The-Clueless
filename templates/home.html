@@ -11,9 +11,39 @@
     <h1> Travel 404. </h1>
     <div class="topnav">
         <a class="active" href="/">Home</a>
-        <a href="countries.html">Countries</a>
+        <a href="{{ url_for('countries') }}">Countries</a>
         <a href="{{ url_for('about') }}">About</a>
-      </div>
+    </div>
+
+    <button onClick="countryChosen(this)">Asia</button>
+    <button onClick="countryChosen(this)">Oceania</button>
+    <button onClick="countryChosen(this)">Africa</button>
+    <button onClick="countryChosen(this)">Europe</button>
+    <button onClick="countryChosen(this)">North America</button>
+    <button onClick="countryChosen(this)">South America</button>
+    <button onClick="countryChosen(this)">Random</button>
+    <br></br>
+    <textarea id="countryChosen"></textarea>
+
+    <script>
+      function countryChosen(elm) {
+        const continents = ["Asia", "Oceania", "Africa", "Europe", "North America", "South America"];
+        
+        if (elm.innerHTML == "Random"){
+            const randomElement = continents[Math.floor(Math.random() * continents.length)];
+            document.getElementById("countryChosen").value = 'The continent ' + randomElement + ' has been randomly chosen';
+
+        }
+        else{
+            document.getElementById('countryChosen').value = 'The contient ' + elm.innerHTML + ' is chosen';
+
+        }
+    }
+    
+    </script>
+
+
+    
 </body>
 
 </html>
