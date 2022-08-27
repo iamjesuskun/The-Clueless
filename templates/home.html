@@ -1,10 +1,11 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
     <a href="/" style="float:left;"><div id="logo-img"></div></a>
     <title>Travel 404 </title>
-    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="../static/styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
 
@@ -16,48 +17,51 @@
         <a href="{{ url_for('countries') }}">Countries</a>
         <a href="{{ url_for('about') }}">About</a>
     </div>
-    <p> Where are you headed to next? </p>
-    <h2> CONTINENTS </h2>
-    <div class="gallery">
-        <a target="_self" href="/Asia">
-            <img src="static/images/continents/Asia.jpg" alt="Asia" width="600" height="400">
-        </a>
-        <div class="desc">ASIA</div>
-    </div>
-    <div class="gallery">
-        <a target="_self" href="/Europe">
-            <img src="static/images/continents/Europe.jpg" alt="Europe" width="600" height="400">
-        </a>
-        <div class="desc">EUROPE</div>
-    </div>
-    <div class="gallery">
-        <a target="_self" href="/Pacific">
-            <img src="static/images/continents/Pacific.jpg" alt="Pacific" width="600" height="400">
-        </a>
-        <div class="desc">PACIFIC</div>
-    </div>
-    <div class="gallery">
-        <a target="_self" href="/NorthAmerica">
-            <img src="static/images/continents/North America.jpg" alt="North America" width="600" height="400">
-        </a>
-        <div class="desc">NORTH AMERICA</div>
-    </div>
-   
-    <div class="gallery">
-        <a target="_self" href="/SouthAmerica">
-            <img src="static/images/continents/South America.jpg" alt="South America" width="600" height="400">
-        </a>
-        <div class="desc">SOUTH AMERICA</div>
-    </div>
-    <div class="gallery">
-        <a target="_self" href="/Africa">
-            <img src="static/images/continents/Africa.jpg" alt="Africa" width="600" height="400">
-        </a>
-        <div class="desc">AFRICA</div>
-    </div>
-    <div class="gallery">
-        <input type="image" src="static/images/continents/Random.png" value="Random" onclick="countryChosen(this.value)" width="220" height="180"/>
-        <div class="desc">RANDOM</div>
+    <h2> Where are you headed to? </h2>
+    <h3> Choose a continent you would like to go travel </h3>
+    
+    <div class = "row">
+        <div class="column">
+            <a target="_self" href="/Asia">
+                <img src="../static/images/continents/Asia.jpg" alt="Asia" width="600" height="400">
+            </a>
+            <div class="desc">Asia</div>
+        </div>
+        <div class="column">
+            <a target="_self" href="/Europe">
+                <img src="../static/images/continents/Europe.jpg" alt="Europe" width="600" height="400">
+            </a>
+            <div class="desc">Europe</div>
+        </div>
+        <div class="column">
+            <a target="_self" href="/Pacific">
+                <img src="../static/images/continents/Pacific.jpg" alt="Pacific" width="600" height="400">
+            </a>
+            <div class="desc">Pacific</div>
+        </div>
+        <div class="column">
+            <a target="_self" href="/NorthAmerica">
+                <img src="../static/images/continents/North America.jpg" alt="North America" width="600" height="400">
+            </a>
+            <div class="desc">North America</div>
+        </div>
+    
+        <div class="column">
+            <a target="_self" href="/SouthAmerica">
+                <img src="../static/images/continents/South America.jpg" alt="South America" width="600" height="400">
+            </a>
+            <div class="desc">South America</div>
+        </div>
+        <div class="column">
+            <a target="_self" href="/Africa">
+                <img src="../static/images/continents/Africa.jpg" alt="Africa" width="600" height="400">
+            </a>
+            <div class="desc">Africa</div>
+        </div>
+        <div class="column">
+            <input type="image" src="../static/images/continents/Random.gif" value="Random" onclick="countryChosen(this.value)"width="600" height="400"/>
+            <div class="desc">Random</div>
+        </div>
     </div>
 
     <!-- <script type="text/javascript">

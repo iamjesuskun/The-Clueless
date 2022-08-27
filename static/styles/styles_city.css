@@ -55,10 +55,12 @@ body {
 h2{
     margin:20px;
     margin-bottom: 30px;
+    font-weight: 600;
 }
+
 h3{
     margin:20px;
-    margin-bottom: 30px;
+    font-weight: 500;
 }
 
 .button {
@@ -86,6 +88,12 @@ h3{
   
   .mySlides {
     display: none;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
   
   @keyframes fade {
