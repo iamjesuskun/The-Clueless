@@ -19,62 +19,49 @@
     <h2> CONTINENTS </h2>
     <div class="gallery">
         <a target="_self" href="/asia">
-        <img src="static/images/Asia.jpg" alt="Asia" width="600" height="400">
+            <img src="static/images/Asia.jpg" alt="Asia" width="600" height="400">
         </a>
         <div class="desc">ASIA</div>
     </div>
     
     <div class="gallery">
-    <!-- <a target="_blank" href="img_forest.jpg"> -->
-        <img src="static/images/Europe.jpg" alt="Europe" width="600" height="400">
-        <button onClick="countryChosen(this)">Europe</button>
-    </a>
-    <!-- <div class="desc">EUROPE</div> -->
+        <a target="_self" href="/europe">
+            <img src="static/images/Europe.jpg" alt="Europe" width="600" height="400">
+        </a>
+        <div class="desc">EUROPE</div>
     </div>
     
     <div class="gallery">
-        <!-- <a target="_blank" href="img_lights.jpg"> -->
-        <img src="static/images/Pacific.jpg" alt="Pacific" width="600" height="400">
-        <button onClick="countryChosen(this)">Pacific</button>
+        <a target="_self" href="/pacific">
+            <img src="static/images/Pacific.jpg" alt="Pacific" width="600" height="400">
         </a>
-        <!-- <div class="desc">PACIFIC</div> -->
+        <div class="desc">PACIFIC</div>
     </div>
     
     <div class="gallery">
-        <!-- <a target="_blank" href="img_mountains.jpg"> -->
-        <img src="static/images/North America.jpg" alt="North America" width="600" height="400">
-        <button onClick="countryChosen(this)">North America</button>
+        <a target="_self" href="/north america">
+            <img src="static/images/North America.jpg" alt="North America" width="600" height="400">
         </a>
-        <!-- <div class="desc">NORTH AMERICA</div> -->
+        <div class="desc">NORTH AMERICA</div>
     </div>
 
     <div class="gallery">
-        <!-- <a target="_blank" href="img_mountains.jpg"> -->
-        <img src="static/images/South America.jpg" alt="South America" width="600" height="400">
-        <button onClick="countryChosen(this)">South America</button>
+        <a target="_self" href="/south america">
+            <img src="static/images/South America.jpg" alt="South America" width="600" height="400">
         </a>
-        <!-- <div class="desc">SOUTH AMERICA</div> -->
+        <div class="desc">SOUTH AMERICA</div>
     </div>
 
     <div class="gallery">
-        <!-- <a target="_blank" href="img_mountains.jpg"> -->
-        <img src="static/images/Africa.jpg" alt="Africa" width="600" height="400">
-        <input type="button" value="Africa" onclick="countryChosen(this.value);" />
+        <a target="_self" href="/africa">
+            <img src="static/images/Africa.jpg" alt="Africa" width="600" height="400">
         </a>
-        <!-- <div class="desc">AFRICA</div> -->
+        <div class="desc">AFRICA</div>
     </div>
     <div class="gallery">
-        <a target="_self" href='return countryChosen(Random)'>
-        <img src="static/images/Random.png" alt="Random" width="600" height="400">
-        <input type="button" value="Random" onclick="countryChosen(this.value);" />
-
-        <!-- <button onClick="countryChosen(this)">Random</button> -->
-        </a>
-        <!-- <div class="desc">AFRICA</div> -->
+        <input type="image" src="static/images/Random.png" value="Random" onclick="countryChosen(this.value)" width="220" height="180"/>
+        <div class="desc">RANDOM</div>
     </div>
-
-    <textarea id="countryChosen"></textarea>
-    <button id="myButton" class="float-left submit-button" >Home</button>
 
     <!-- <script type="text/javascript">
         document.getElementById("myButton").onclick = function () {
@@ -83,18 +70,13 @@
     </script> -->
     <script>
         function countryChosen(elm) {
-            const continents = ["Asia", "Pacific", "Africa", "Europe", "North America", "South America"];
-          
-            if (elm.innerHTML == "Random"){
+            const continents = ["asia", "pacific", "africa", "europe", "north america", "south america"];  
+            if (elm == "Random"){
                 const randomElement = continents[Math.floor(Math.random() * continents.length)];
-                // location.href = 
-                window.location('/' + randomElement);
+                // document.getElementById("countryChosen").value = 'The continent ' + randomElement + ' has been randomly chosen';
+                location.href = randomElement;
+                // window.location('/' + randomElement);
 
-            }
-            else{
-            // alert("the continent " +elm.innerHTML+ 'is chosen');
-                document.getElementById('countryChosen').value = 'The continent ' + elm.innerHTML + ' is chosen';
-                window.location('/' + elm.innerHTML);
             }
         }
     </script>
