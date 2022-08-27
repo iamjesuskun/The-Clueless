@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <a href="home.html" style="float:left;"><div id="logo-img"></div></a>
+    <title>Travel 404 </title>
+    <link rel="stylesheet" href="../static/styles/styles_city.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+
+</head>
+<body>
+    <h1>Travel 404. </h1>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="countries.html">Countries</a>
+        <a href="about.html">About</a>
+    </div>
+    <div>
+        <h2>The next step is to find a city!</h2>
+        <h3>What cities where you thinking when pressing the continents?</h3>
+        <div class="slideshow-container">
+            <div class="mySlides fade"><img src="../static/images/cities/North America/america.jpeg" width="650" height="450"></div>
+            <div class="mySlides fade"><img src="../static/images/cities/North America/canada.jpeg" width="650" height="450"></div>
+            <div class="mySlides fade"><img src="../static/images/cities/North America/cuba.jpeg" width="650" height="450"></div>
+            <div class="mySlides fade"><img src="../static/images/cities/North America/mexico.jpeg" width="650" height="450"></div>
+        </div>
+        <br>
+    <script>
+        let index = 0;
+        displaySlides();
+        function displaySlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        index++;
+        if (index > slides.length) 
+            index = 1
+        slides[index-1].style.display = "block";
+        setTimeout(displaySlides, 2500);
+        }
+    </script>
+    <div style="text-align: center; margin-top: 30px;"><button class="button">Randomize</button></div>
+
+</body>
+
+</html>

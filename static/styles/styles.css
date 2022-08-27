@@ -12,6 +12,14 @@
   overflow: hidden;
 }
 
+h2{
+  margin-bottom: 30px;
+}
+
+h3{
+  margin-bottom: 50px;
+}
+
 head{
   margin-left: 10px;
 }
