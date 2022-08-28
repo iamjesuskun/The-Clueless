@@ -38,5 +38,9 @@ def africa():
 def pacific():
     return render_template('continents/pacific.html')
 
+@app.route('/Randomized', methods=['GET', 'POST'])
+def randomized():
+    return render_template('Randomized.html')
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
