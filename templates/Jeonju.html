@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Travel 404 </title>
+      <link rel="stylesheet" href="../static/styles/styles_randomize.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+  </head>
+  <body>
+    <a href="/" style="float:left;"><div id="logo-img"></div></a>
+    <h1> Travel 404. </h1>
+
+    <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="{{ url_for('countries') }}">Countries</a>
+      <a href="{{ url_for('about') }}">About</a>
+    </div>
+
+    <div id = "content">
+      <h2> Your randomized city is: </h2>
+      <div><center><img src="../static/images/JeonJu/jeonju.jpeg" alt="city" width="600" height="400"></center></div>
+      <div style="text-align: center;"><h3>Jeonju</h3></div>
+      <div style="text-align: center; margin-top: 30px;"><button onClick="window.location.reload();"class = "button">Redo</button></div>
+      <div>
+        <h2>Food</h2>
+        <center><div>
+          <a href = "https://en.wikipedia.org/wiki/Bibimbap"><img src="../static/images/JeonJu/bibimbab.webp" alt="bibim" width="30%" ></a>
+          <a hreft = "https://www.wikidata.org/wiki/Q55735280"><img src="../static/images/JeonJu/kukbab.jpeg" alt="kuk" width="30%"></a>
+          <a href="https://en.wikipedia.org/wiki/Makgeolli"></a><img src="../static/images/JeonJu/mak.gif" alt="mak" width="30%" height = 285px></a>
+        </div></center>
+        <h2>Things to watch</h2>
+        <a href = "https://en.wikipedia.org/wiki/Jeonju_Hyanggyo"><img src="../static/images/JeonJu/경기전.jpeg" alt="bibim" width="30%" ></a>
+          <a hreft = "https://en.wikipedia.org/wiki/Night_market"><img src="../static/images/JeonJu/야시장.jpeg" alt="kuk" width="30%"></a>
+          <a href="https://en.wikipedia.org/wiki/Bukchon_Hanok_Village"></a><img src="../static/images/JeonJu/한옥마을.jpeg" alt="mak" width="30%" height = 285px></a>
+        <h2>Things to do</h2>
+        <a href = "https://en.wikipedia.org/wiki/Hanbok"><img src="../static/images/JeonJu/한복" alt="bibim" width="30%" ></a>
+          <a hreft = "https://www.wikidata.org/wiki/Q55735280"><img src="../static/images/JeonJu/kukbab.jpeg" alt="kuk" width="30%"></a>
+          <a href="https://en.wikipedia.org/wiki/Makgeolli"></a><img src="../static/images/JeonJu/mak.gif" alt="mak" width="30%" height = 285px></a>
+      </div>
+    </div>
+  </body>
+</html>
