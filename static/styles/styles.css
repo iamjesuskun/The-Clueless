@@ -15,11 +15,13 @@
 h2{
   font-family: 'Roboto', sans-serif;
   margin-left: 10px;
+  font-weight: 600;
 }
 
 h3{
   font-family: 'Roboto', sans-serif;
   margin-left: 10px;
+  font-weight: 500;
 }
 
 head{
