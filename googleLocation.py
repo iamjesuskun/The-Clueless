@@ -35,15 +35,7 @@ def returnCoords():
         headers = {}
 
         response = requests.request("GET", url[2], headers=headers, data=payload)
-
-        # print(response.text)
-        # print("\n\n\n\n\n\n\nNew\n\n\n\n\n")
-        # print(type(response))
-        
         jsonResponse = response.json()
-        # print(response.text)
-        # print(type(jsonResponse["results"]))
-        # print("\n\n\n\n\n\n\nNew\n\n\n\n\n")
         rounds +=1
         if(jsonResponse["status"] == "ZERO_RESULTS"):
             continue
