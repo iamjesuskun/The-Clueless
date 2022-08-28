@@ -15,13 +15,11 @@
 h2{
   font-family: 'Roboto', sans-serif;
   margin-left: 10px;
-  font-weight: 600;
 }
 
 h3{
   font-family: 'Roboto', sans-serif;
   margin-left: 10px;
-  font-weight: 500;
 }
 
 head{
@@ -73,10 +71,13 @@ div.relative {
   border: 3px;
 }
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .column {
   float: left;
-  margin: 5px;
-  border: 1px solid #ccc;
-  width: 200px;
-  height:180px;
+  width: 14.20%;
 }
