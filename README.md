@@ -1,4 +1,4 @@
-##Travel 404
+**Travel 404**
 ## Inspiration
 Under the Covid pretext, we recognise there are a lot of individuals who have been financially affected or time impaired by the pandemic and therefore are no longer able to afford a holiday, whether it be domestically or internationally. Yet we still wish to promote and share the wonders of this world with everyone. 
 
