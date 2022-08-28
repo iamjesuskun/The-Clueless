@@ -73,13 +73,10 @@ div.relative {
   border: 3px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .column {
   float: left;
-  width: 14.20%;
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+  height:180px;
 }
